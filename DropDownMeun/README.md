@@ -42,79 +42,49 @@
 
 **实现 HJDropDownMeunDataSource 的方法：**
 
-[Required] - 返回顶部列表的个数
 ```Objective-C
+// [Required] - 返回顶部列表的个数
 - (NSInteger)numberOfColumnsInDropDownMeun:(HJDropDownMeun *)meun
-```
 
-[Optional] - 返回 1 时（默认），展示单列表；> 1 时，为双级列表的第一级行数
-
-```Objective-C
+// [Optional] - 返回 1 时（默认），展示单列表；> 1 时，为双级列表的第一级行数
 - (NSInteger)dropDownMeun:(HJDropDownMeun *)meun numberSectionInColumn:(NSInteger)column;
-```
 
-[Required] - 返回子级列表个数：单级列表行数、双级列表的第二级行数
-
-```Objective-C
+// [Required] - 返回子级列表个数：单级列表行数、双级列表的第二级行数
 - (NSInteger)dropDownMeun:(HJDropDownMeun *)meun numberRowInSectionAtIndexPath:(HJIndexPath *)indexPath
-```
 
-[Required] - 返回顶部列表对应 index 的标题
-
-```Objective-C
+// [Required] - 返回顶部列表对应 index 的标题
 - (NSString *)dropDownMeun:(HJDropDownMeun *)meun titleForColumn:(NSInteger)column;
-```
 
-[Optional] - 返回 Section 列表对应 index 的标题
-
-```Objective-C
+// [Optional] - 返回 Section 列表对应 index 的标题
 - (NSString *)dropDownMeun:(HJDropDownMeun *)meun titleForSectionAtIndexPath:(HJIndexPath *)indexPath;
-```
 
-[Required] - 返回 Row 列表对应 index 的标题
-```Objective-C
+// [Required] - 返回 Row 列表对应 index 的标题
 - (NSString *)dropDownMeun:(HJDropDownMeun *)meun titleForRowAtIndexPath:(HJIndexPath *)indexPath;
-```
 
-[Optional] - 返回 Column 列表的字体
-```Objective-C
+// [Optional] - 返回 Column 列表的字体
 - (UIFont *)dropDownMeun:(HJDropDownMeun *)meun fontForColumn:(NSInteger)column;
-```
 
-[Optional] - 返回 Section 列表的字体
-```Objective-C
+// [Optional] - 返回 Section 列表的字体
 - (UIFont *)dropDownMeun:(HJDropDownMeun *)meun fontForSection:(NSInteger)section;
-```
 
-[Optional] - 返回 Row 列表的字体
-```Objective-C
+// [Optional] - 返回 Row 列表的字体
 - (UIFont *)dropDownMeun:(HJDropDownMeun *)meun fontForRow:(NSInteger)row;
 ```
 
 
-
-
-
-
-
 **实现 HJDropDownMeunDelegate 的方法 [Optional]:**
 
-点击 Row 回调
+
 ```Objective-C
+// 点击 Row 回调
 - (void)dropDownMeun:(HJDropDownMeun *)meun didSelectRowAtIndexPath:(HJIndexPath *)indexPath;
-```
 
-返回 Column 的宽度
-```Objective-C
+// 返回 Column 的宽度
 - (CGFloat)dropDownMeun:(HJDropDownMeun *)meun widthForColumn:(NSInteger)column;
-```
 
-返回 Section 的高度
-```Objective-C
+// 返回 Section 的高度
 - (CGFloat)heigtForSectionInDropDownMeun:(HJDropDownMeun *)meun;
-```
 
-返回 Row 的高度
-```Objective-C
+// 返回 Row 的高度
 - (CGFloat)heigtForRowInDropDownMeun:(HJDropDownMeun *)meun;
 ```
